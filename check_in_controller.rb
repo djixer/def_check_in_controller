@@ -89,7 +89,7 @@ class OrdersController < ApplicationController
     false
   end
 
-  #Получаем из другого нашего сервиса стоимость выбранной пользователем конфигурации:
+  #Получаем из другого нашего сервиса (репозиторий cost_vm_service) стоимость выбранной пользователем конфигурации:
   def get_price_vm(cpu, ram, hdd_type, hdd_capacity)
     url = "http://192.168.0.6:5678/cost?cpu=#{cpu}&ram=#{ram}&hdd_type=#{hdd_type}&hdd_capacity=#{hdd_capacity}"
     uri = URI(url)
